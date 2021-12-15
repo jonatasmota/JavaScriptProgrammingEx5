@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
+    <title>Invoice</title>
+</head>
+<body>
+    <div>
+    <script>
+        document.write(`<p>Firstname: ${firstName}</p>`);
+        document.write(`<p>Lastname: ${lastName}</p>`);
+        document.write(`<p>Invoice Amount: ${invoiceAmt.toFixed(2)}`);
+        document.write(`<p>Discount: ${discountPercentage * 100}%</p>`);
+        document.write(`<p>Discount Amount: ${discountAmt}</p>`);
+        document.write(`<p>Invoice Total: ${invoiceTotal}</p>`);
+        
+    </script>
+    <script>
+        let markUp;
+        if(discountPercentage != 0) {
+            markUp = `<p>Discount Percentage: ${discountPercentage * 100}%</p>
+            <p>Discount Amount: ${discountAmt.toFixed(2)}</p>
+            <p>Discounted Invoice: $${invoiceTotal.toFixed(2)}</p>`
+        };
+        document.write(markUp);
+    </script>
+    
+    </div>
+    <p>
+        <a href="index.html" class="button">Calculate another invoice</a>
+    </p>
+</body>
+</html>
